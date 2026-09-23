@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101d32" />
+    <meta
+      name="description"
+      content="Tristan Jones's Bassaleg School Welsh Baccalaureate Global Assignment investigating drop-off rates in youth participation in sport."
+    />
+    <title>Staying in the Game | Tristan Jones | Welsh Baccalaureate</title>
+    <style>
+      :root {
+        --ink: #17243b;
+        --navy: #101d32;
+        --blue: #2563eb;
+        --mint: #c5f35b;
+        --cream: #f7f7f2;
+        --muted: #526078;
+        --line: #dbe1e8;
+        --white: #fff;
+        --coral: #ff8067;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font:
+          16px/1.6 Arial,
+          Helvetica,
+          sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+      }
+      a {
+        color: inherit;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 3px;
+      }
+      .wrap {
+        width: min(1120px, calc(100% - 40px));
+        margin: auto;
+      }
+      .top {
+        background: var(--navy);
+        color: white;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 0;
+      }
+      .brand {
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        font-size: 1.25rem;
+        text-decoration: none;
+      }
+      .brand span {
+        color: var(--mint);
+      }
+      .navlinks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 0.85rem;
+      }
+      .navlinks a {
+        text-decoration: none;
+        color: #d8e3f0;
+      }
+      .navlinks a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        padding: 84px 0 94px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero:after {
+        content: "";
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        border: 76px solid #263a58;
+        border-radius: 50%;
+        right: -130px;
+        top: 20px;
+        opacity: 0.6;
+      }
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 58px;
+        align-items: center;
+      }
+      .student-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        padding: 13px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+      }
+      .student-photo {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: 50% 27%;
+        border-radius: 16px;
+      }
+      .student-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 15px 7px 5px;
+      }
+      .student-meta strong,
+      .student-meta span {
+        display: block;
+      }
+      .student-meta span {
+        color: #b9c7d8;
+        font-size: 0.78rem;
+      }
+      .school-logo {
+        width: 105px;
+        height: auto;
+        padding: 7px;
+        border-radius: 9px;
+        background: white;
+      }
+      .project-byline {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin: 4px 0 0;
+        color: white;
+        font-weight: 800;
+      }
+      .project-byline::before {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background: var(--mint);
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 800;
+        font-size: 0.76rem;
+        color: var(--mint);
+      }
+      h1 {
+        font-size: clamp(3.1rem, 8vw, 6.4rem);
+        line-height: 0.99;
+        letter-spacing: -0.075em;
+        max-width: 850px;
+        margin: 18px 0 24px;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--mint);
+      }
+      .lead {
+        font-size: clamp(1.05rem, 2vw, 1.35rem);
+        max-width: 690px;
+        color: #d7e2ef;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .btn {
+        display: inline-block;
+        border-radius: 100px;
+        padding: 13px 20px;
+        text-decoration: none;
+        font-weight: 800;
+        background: var(--mint);
+        color: var(--navy);
+      }
+      .btn.alt {
+        background: transparent;
+        color: white;
+        border: 1px solid #8d9bb0;
+      }
+      .note {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .hero .note {
+        color: #b5c2d3;
+        margin-top: 22px;
+      }
+      .section {
+        padding: 75px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .kicker {
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: #315dc3;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .section h2 {
+        font-size: clamp(2rem, 4.7vw, 3.6rem);
+        letter-spacing: -0.06em;
+        line-height: 1.08;
+        margin: 9px 0 18px;
+      }
+      .intro {
+        max-width: 750px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        margin: 0 0 30px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 8px 24px #101d3208;
+      }
+      .card h3 {
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        margin: 0 0 9px;
+      }
+      .card p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+      .tag {
+        display: inline-block;
+        background: #eaf1fb;
+        color: #244681;
+        font-size: 0.74rem;
+        font-weight: 800;
+        padding: 5px 10px;
+        border-radius: 100px;
+        margin-bottom: 15px;
+      }
+      .stats {
+        background: #eaf0f4;
+      }
+      .stat {
+        display: flex;
+        flex-direction: column;
+      }
+      .stat strong {
+        display: block;
+        font-size: clamp(2.5rem, 5vw, 4.3rem);
+        letter-spacing: -0.08em;
+        line-height: 1;
+        color: var(--navy);
+        margin: 8px 0 14px;
+      }
+      .stat .detail {
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .stat .context {
+        font-size: 0.88rem;
+        line-height: 1.4;
+        margin-top: auto;
+        padding-top: 14px;
+        color: var(--muted);
+      }
+      .stat a {
+        font-size: 0.86rem;
+        color: #2355af;
+        font-weight: 700;
+      }
+      .callout {
+        background: var(--navy);
+        color: white;
+        border-radius: 17px;
+        padding: 25px 28px;
+        margin-top: 22px;
+      }
+      .callout strong {
+        color: var(--mint);
+      }
+      .callout p {
+        margin: 5px 0 0;
+        color: #d9e4f1;
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 40px;
+        align-items: start;
+      }
+      .list {
+        display: grid;
+        gap: 13px;
+      }
+      .list .card {
+        padding: 20px 24px;
+      }
+      .list h3 {
+        font-size: 1.06rem;
+      }
+      .list p {
+        font-size: 0.94rem;
+      }
+      .number {
+        font-size: 0.77rem;
+        color: #315dc3;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        margin-bottom: 6px;
+      }
+      .dark {
+        background: var(--navy);
+        color: white;
+      }
+      .dark .intro,
+      .dark .card p {
+        color: #c2cfde;
+      }
+      .dark .card {
+        background: #1a2b45;
+        border-color: #30415a;
+      }
+      .dark .kicker {
+        color: var(--mint);
+      }
+      .dark .tag {
+        background: #2e4662;
+        color: var(--mint);
+      }
+      .dark a {
+        color: var(--mint);
+      }
+      .source-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+      }
+      .source-list li {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .source-list a {
+        font-weight: 800;
+        color: #1d4ca1;
+      }
+      .source-list small {
+        display: block;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .craap-intro {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin: 28px 0;
+      }
+      .craap-intro div {
+        background: var(--navy);
+        color: white;
+        border-radius: 12px;
+        padding: 16px;
+      }
+      .craap-intro strong {
+        display: block;
+        color: var(--mint);
+        font-size: 1.05rem;
+      }
+      .craap-intro span {
+        color: #c2cfde;
+        font-size: 0.82rem;
+      }
+      .craap-list {
+        display: grid;
+        gap: 14px;
+      }
+      .craap-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+      }
+      .craap-card h3 {
+        margin: 0 0 10px;
+        letter-spacing: -0.025em;
+      }
+      .craap-card p {
+        color: var(--muted);
+        margin: 0 0 12px;
+      }
+      .craap-card p:last-child {
+        margin-bottom: 0;
+      }
+      .craap-card a {
+        color: #1d4ca1;
+        font-weight: 800;
+      }
+      .footer {
+        background: var(--navy);
+        color: #bdcad9;
+        padding: 30px 0;
+        font-size: 0.87rem;
+      }
+      .footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+      .footer p {
+        margin: 0;
+      }
+      .prompt {
+        border-left: 4px solid var(--blue);
+        background: #edf3ff;
+        padding: 20px 24px;
+        border-radius: 0 12px 12px 0;
+        margin-top: 22px;
+      }
+      @media (max-width: 800px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .craap-intro {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .student-card {
+          display: grid;
+          grid-template-columns: 145px 1fr;
+          align-items: center;
+          max-width: 520px;
+        }
+        .student-photo {
+          aspect-ratio: 1 / 1;
+        }
+        .student-meta {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 18px;
+        }
+        .hero {
+          padding: 65px 0;
+        }
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .navlinks {
+          gap: 10px 16px;
+        }
+      }
+      @media (max-width: 560px) {
+        .wrap {
+          width: min(100% - 30px, 1120px);
+        }
+        .grid,
+        .source-list {
+          grid-template-columns: 1fr;
+        }
+        .craap-intro {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 55px 0;
+        }
+        .hero {
+          padding: 50px 0 65px;
+        }
+        .hero:after {
+          right: -250px;
+        }
+        .student-card {
+          grid-template-columns: 1fr;
+        }
+        .student-photo {
+          aspect-ratio: 4 / 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top" id="top">
+      <div class="wrap">
+        <nav class="nav" aria-label="Main navigation">
+          <a class="brand" href="#top">STAYING <span>IN THE GAME</span></a>
+          <div class="navlinks">
+            <a href="#definitions">Definitions</a
+            ><a href="#statistics">Statistics</a
+            ><a href="#why">Why it happens</a
+            ><a href="#consequences">Consequences</a
+            ><a href="#solutions">What helps</a><a href="#craap">CRAAP</a
+            ><a href="#sources">Sources</a>
+          </div>
+        </nav>
+        <div class="hero">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                Welsh Baccalaureate Global Assignment · Bassaleg School
+              </div>
+              <h1>Drop-off rates in youth <em>participation in sport</em></h1>
+              <p class="lead">
+                Exploring when participation changes, the barriers behind it and
+                what could help more young people remain involved.
+              </p>
+              <p class="project-byline">Research by Tristan Jones</p>
+              <div class="hero-actions">
+                <a class="btn" href="#statistics">Explore the evidence ↓</a
+                ><a class="btn alt" href="#sources">Read the sources ↗</a>
+              </div>
+              <p class="note">
+                Main focus: ages 16–18. Every statistic is labelled with the age
+                group and type of participation measured by its source.
+              </p>
+            </div>
+            <aside class="student-card" aria-label="Student project details">
+              <img
+                class="student-photo"
+                src="assets/tristan-jones.png"
+                alt="Tristan Jones"
+              />
+              <div class="student-meta">
+                <div>
+                  <strong>Tristan Jones</strong>
+                  <span>Welsh Baccalaureate</span>
+                  <span>Global Assignment</span>
+                </div>
+                <img
+                  class="school-logo"
+                  src="assets/bassaleg-school-logo.png"
+                  alt="Bassaleg School logo"
+                />
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section" id="definitions">
+        <div class="wrap">
+          <div class="kicker">01 / Know the terms</div>
+          <h2>What counts as a drop-off?</h2>
+          <p class="intro">
+            A young person can leave a club yet remain active in other ways.
+            These terms help us ask the right question.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <span class="tag">Participation</span>
+              <h3>Taking part</h3>
+              <p>
+                Doing sport or physical activity at a particular time. Surveys
+                may measure club sport, informal sport or all physical activity
+                differently.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Drop-off</span>
+              <h3>Taking part less often</h3>
+              <p>
+                A reduction in how frequently someone participates. Comparing
+                different age groups can suggest a pattern, but cannot show that
+                the same people reduced their activity.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Dropout</span>
+              <h3>Stopping an activity</h3>
+              <p>
+                Leaving a specific sport, club or programme. This does not
+                automatically mean someone has stopped all sport or exercise.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section stats" id="statistics">
+        <div class="wrap">
+          <div class="kicker">02 / The evidence</div>
+          <h2>Six figures worth examining</h2>
+          <p class="intro">
+            Each statistic describes the people and activity actually measured.
+            These figures come from separate surveys and must not be combined
+            into one dropout rate.
+          </p>
+          <div class="grid">
+            <article class="card stat">
+              <span class="tag">Wales · school years 3–11 · 2021/22</span
+              ><strong>56%</strong>
+              <p class="detail">
+                took part in a community sports club at least weekly
+              </p>
+              <p class="context">
+                Down 9 percentage points compared with the 2018 survey.
+              </p>
+              <a href="#source-1">Sport Wales ↗</a>
+            </article>
+            <article class="card stat">
+              <span class="tag">Wales · Years 10–11 · 2021/22</span
+              ><strong>39%</strong>
+              <p class="detail">
+                reported organised sport outside lessons less than once a week
+              </p>
+              <p class="context">
+                A picture of participation near the end of compulsory schooling.
+              </p>
+              <a href="#source-1">Sport Wales ↗</a>
+            </article>
+            <article class="card stat">
+              <span class="tag">Girls · age 17–18 · UK survey 2021</span
+              ><strong>28%</strong>
+              <p class="detail">described themselves as “sporty”</p>
+              <p class="context">
+                The comparable figure for boys of the same age was 58%. This
+                measures identity, not a dropout rate.
+              </p>
+              <a href="#source-2">Women in Sport ↗</a>
+            </article>
+            <article class="card stat">
+              <span class="tag">Lower-income group · age 11–24 · 2023</span
+              ><strong>39%</strong>
+              <p class="detail">
+                chose affordability among their five main barriers
+              </p>
+              <p class="context">
+                Based on 1,000 young people, not solely 16–18 year olds.
+              </p>
+              <a href="#source-3">StreetGames ↗</a>
+            </article>
+            <article class="card stat">
+              <span class="tag">Lower-income group · age 11–24 · 2023</span
+              ><strong>35%</strong>
+              <p class="detail">chose lack of time as a major barrier</p>
+              <p class="context">
+                The same proportion selected a lack of confidence.
+              </p>
+              <a href="#source-3">StreetGames ↗</a>
+            </article>
+            <article class="card stat">
+              <span class="tag">Wales · age 16–24 · 2024/25</span
+              ><strong>52%</strong>
+              <p class="detail">
+                took part in sport or physical activity three or more times a
+                week
+              </p>
+              <p class="context">
+                Includes adults aged 19–24 and a wider definition of physical
+                activity.
+              </p>
+              <a href="#source-7">Sport Wales ↗</a>
+            </article>
+          </div>
+          <div class="callout">
+            <strong>Reading the numbers correctly</strong>
+            <p>
+              Lower participation among older pupils is evidence of an
+              age-related pattern. Measuring how many individuals actually stop
+              requires following the same people over time or asking about their
+              past and current participation.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="why">
+        <div class="wrap split">
+          <div>
+            <div class="kicker">03 / The barriers</div>
+            <h2>Why might participation change?</h2>
+            <p class="intro">
+              Research points to several overlapping reasons. They affect
+              different young people in different ways.
+            </p>
+          </div>
+          <div class="list">
+            <article class="card">
+              <div class="number">01 / ACCESS</div>
+              <h3>Cost and transport</h3>
+              <p>
+                Fees, equipment and travel can make opportunities harder to
+                reach. Gwent peer research also emphasised safe, local venues.
+                <a href="#source-3">StreetGames</a> ·
+                <a href="#source-5">Gwent research</a>
+              </p>
+            </article>
+            <article class="card">
+              <div class="number">02 / TIME</div>
+              <h3>Other demands</h3>
+              <p>
+                Study, work, other interests and the commitment required by
+                formal sessions can compete with sport.
+                <a href="#source-3">StreetGames</a> ·
+                <a href="#source-5">Gwent research</a>
+              </p>
+            </article>
+            <article class="card">
+              <div class="number">03 / EXPERIENCE</div>
+              <h3>Confidence and belonging</h3>
+              <p>
+                Confidence, body image and feeling comfortable in a session
+                matter, particularly in research about teenage girls. Friends
+                can make trying an activity easier.
+                <a href="#source-2">Women in Sport</a> ·
+                <a href="#source-4">Youth Sport Trust</a> ·
+                <a href="#source-5">Gwent research</a>
+              </p>
+            </article>
+            <article class="card">
+              <div class="number">04 / CHOICE</div>
+              <h3>One format does not suit everyone</h3>
+              <p>
+                Some young people value competition; others want informal play,
+                different sports or more freedom to choose.
+                <a href="#source-5">Gwent research</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section dark" id="consequences">
+        <div class="wrap">
+          <div class="kicker">04 / Why it matters</div>
+          <h2>What could be lost?</h2>
+          <p class="intro">
+            Sport can provide movement, friendship, enjoyment and a sense of
+            achievement. Leaving a club does not necessarily mean losing all of
+            those benefits; the question is whether a young person finds another
+            way to be active.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <span class="tag">Physical health</span>
+              <h3>Less opportunity to move</h3>
+              <p>
+                If overall activity falls, it may be harder to reach the UK
+                Chief Medical Officers’ guidance for ages 5–18: an average of at
+                least 60 minutes of moderate to vigorous activity a day across
+                the week. <a href="#source-8">Read guidance ↗</a>
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Wellbeing</span>
+              <h3>Fewer positive experiences</h3>
+              <p>
+                Sport and activity can support wellbeing and confidence. The
+                effect of leaving will depend on the person and what activities
+                replace it. <a href="#source-8">Read guidance ↗</a>
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Connection</span>
+              <h3>Less time with a sporting community</h3>
+              <p>
+                Young people in Gwent described friendships and belonging as
+                valuable parts of sport. Leaving a team can mean losing that
+                particular social space.
+                <a href="#source-5">Read research ↗</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="wrap">
+          <div class="kicker">05 / Responses</div>
+          <h2>What could help young people stay?</h2>
+          <p class="intro">
+            These are practical options drawn from the barriers and preferences
+            in the research. They are ideas to test locally, not proven fixes
+            for every young person.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <span class="tag">Option 1</span>
+              <h3>Make it easier to get there</h3>
+              <p>
+                Use accessible local venues and consider the combined cost of
+                sessions, kit and travel.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Option 2</span>
+              <h3>Offer more than one way to play</h3>
+              <p>
+                Keep competitive pathways while adding informal, social or
+                flexible sessions.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Option 3</span>
+              <h3>Ask young people first</h3>
+              <p>
+                Find out which times, activities and session styles they would
+                actually choose; involve them in shaping the offer.
+              </p>
+            </article>
+          </div>
+          <div class="prompt">
+            <strong>Question to investigate:</strong> “If you played sport at
+            14–15, do you still take part now? If your participation changed,
+            what made the biggest difference?” Ask separately about club sport,
+            informal sport and other physical activity.
+          </div>
+        </div>
+      </section>
+      <section class="section stats" id="action">
+        <div class="wrap">
+          <div class="kicker">06 / What is being done</div>
+          <h2>UK and Welsh action</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Sport Wales</h3>
+              <p>
+                Uses the School Sport Survey to understand young people’s
+                experiences and help organisations plan opportunities. Its
+                strategy calls for flexible opportunities through life
+                transitions. <a href="#source-1">Evidence ↗</a> ·
+                <a href="#source-9">Strategy ↗</a>
+              </p>
+            </article>
+            <article class="card">
+              <h3>StreetGames in Wales</h3>
+              <p>
+                Has worked with young peer researchers in Gwent and on the Us
+                Girls Wales project to listen to young people and shape local
+                activities around their preferences.
+                <a href="#source-5">Gwent ↗</a> ·
+                <a href="#source-6">Us Girls Wales ↗</a>
+              </p>
+            </article>
+            <article class="card">
+              <h3>Women in Sport and Youth Sport Trust</h3>
+              <p>
+                Publish research on girls’ experiences, confidence and barriers,
+                giving schools and providers evidence to consider when designing
+                sessions. <a href="#source-2">Women in Sport ↗</a> ·
+                <a href="#source-4">Youth Sport Trust ↗</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="craap">
+        <div class="wrap">
+          <div class="kicker">07 / Evaluating the evidence</div>
+          <h2>The CRAAP analysis</h2>
+          <p class="intro">
+            Each source has been checked for Currency, Relevance, Authority,
+            Accuracy and Purpose. The evaluations are written as paragraphs so
+            the strengths and limitations of each source can be considered
+            together.
+          </p>
+          <div class="craap-intro" aria-label="CRAAP test definitions">
+            <div><strong>Currency</strong><span>How recent is it?</span></div>
+            <div>
+              <strong>Relevance</strong
+              ><span>Does it answer the question?</span>
+            </div>
+            <div><strong>Authority</strong><span>Who produced it?</span></div>
+            <div>
+              <strong>Accuracy</strong><span>Is the evidence dependable?</span>
+            </div>
+            <div>
+              <strong>Purpose</strong><span>Why was it published?</span>
+            </div>
+          </div>
+          <div class="craap-list">
+            <article class="craap-card">
+              <span class="tag">Resource 1 · Sport Wales</span>
+              <h3>School Sport Survey 2022</h3>
+              <p>
+                This source has good <strong>currency</strong> because it was
+                published in 2022 and covers the 2021/22 academic year. It is
+                highly <strong>relevant</strong> because it examines
+                participation among pupils in Wales, including Years 10 and 11,
+                although it does not follow individuals to establish exactly how
+                many stopped. Its <strong>authority</strong> is strong because
+                Sport Wales is the national organisation responsible for
+                developing sport in Wales. Its <strong>accuracy</strong> is
+                supported by a large national survey and clear definitions, but
+                the results are self-reported. Its <strong>purpose</strong> is
+                to inform schools and sporting organisations and improve
+                opportunities, rather than sell a product, although Sport Wales
+                has an interest in encouraging participation.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It shows how participation
+                changes across school years and provides a Welsh starting point
+                for investigating what happens after Year 11.
+                <a href="#source-1">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 2 · Women in Sport</span>
+              <h3>Reframing Sport for Teenage Girls</h3>
+              <p>
+                This source has reasonable <strong>currency</strong> because it
+                was published in 2022 using research conducted in July 2021. It
+                is extremely <strong>relevant</strong> because it covers ages
+                11–18 and gives separate findings for 17–18 year olds, although
+                its main focus is girls. Its <strong>authority</strong> is
+                strong because Women in Sport specialises in girls’
+                participation and the survey was conducted by professional
+                researchers at Savanta. Its <strong>accuracy</strong> is
+                supported by a nationally representative survey of 2,291 girls
+                and 2,024 boys, although a term such as “sporty” is based on
+                personal identity rather than an objective participation
+                measure. Its <strong>purpose</strong> is to raise awareness and
+                encourage improved provision. This campaigning aim may shape the
+                presentation, but the claims are supported by survey evidence.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It allows comparisons between
+                girls and boys and supports questions about compulsory PE,
+                confidence, body image and available activities.
+                <a href="#source-2">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 3 · StreetGames</span>
+              <h3>1,000 Young Voices</h3>
+              <p>
+                This source has good <strong>currency</strong> because the
+                survey and follow-up discussions took place in 2023. It is
+                <strong>relevant</strong> because it investigates barriers to
+                sport and includes 16–19 year olds, although the headline
+                statistics cover the wider 11–24 range and lower-income
+                households. Its <strong>authority</strong> comes from
+                StreetGames’ experience in underserved communities and its use
+                of Platypus Research. Its <strong>accuracy</strong> is
+                strengthened by a survey of 1,000 young people and a qualitative
+                forum, but its sample should not be treated as representative of
+                every UK teenager. Its <strong>purpose</strong> is to amplify
+                lower-income young people’s voices and help providers improve
+                opportunities. StreetGames has an interest in highlighting
+                barriers, but this is made clear.
+              </p>
+              <p>
+                <strong>How it helps:</strong> Its findings can shape
+                questionnaire choices about cost, time, confidence, energy,
+                anxiety and having someone to attend with.
+                <a href="#source-3">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 4 · Youth Sport Trust</span>
+              <h3>Girls Active National Reports 2025</h3>
+              <p>
+                This source has excellent <strong>currency</strong> because
+                responses were collected in autumn 2024 and summer 2025. It is
+                <strong>relevant</strong> because it examines participation,
+                confidence and experiences of physical activity, but does not
+                calculate a 16–18 dropout rate. Its
+                <strong>authority</strong> is strong because the Youth Sport
+                Trust is an established charity specialising in PE and school
+                sport. Its <strong>accuracy</strong> benefits from 17,971
+                responses across 137 English schools, although the data was
+                unweighted and relates to England rather than Wales. Its
+                <strong>purpose</strong> is to identify inequalities, improve
+                girls’ experiences and promote Girls Active, making it both
+                informative and campaigning.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It supports investigation of
+                gender, confidence, enjoyment and overlapping barriers such as
+                income, disability and ethnicity.
+                <a href="#source-4">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 5 · StreetGames and Sport Wales</span>
+              <h3>Gwent Peer Research</h3>
+              <p>
+                This source has reasonable <strong>currency</strong> because it
+                was conducted in 2022 after the pandemic. It is locally
+                <strong>relevant</strong> because it includes young people in
+                Gwent and pupils at Croesyceiliog and West Monmouth, although
+                the participants were younger than 16–18. Its
+                <strong>authority</strong> is strong because StreetGames was
+                commissioned by Sport Wales. Its <strong>accuracy</strong> is
+                supported by trained peer researchers, which may have encouraged
+                honest discussion, but only three groups took part and the
+                findings cannot represent all of Gwent. Its
+                <strong>purpose</strong> was to understand young people’s
+                preferences and improve local provision through practical
+                action.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It gives a local comparison and
+                supports questions about transport, safe venues, friends,
+                commitment and formal versus informal sessions.
+                <a href="#source-5">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 6 · StreetGames and SEWSCAP</span>
+              <h3>Us Girls Wales Peer Research</h3>
+              <p>
+                This source has reasonable <strong>currency</strong> because the
+                project ran in 2021–22. It is geographically
+                <strong>relevant</strong> because it concerns girls in South
+                East and Mid Wales, including Blaenau Gwent and Caerphilly,
+                although it does not provide a separate dropout rate for ages
+                16–18. Its <strong>authority</strong> comes from StreetGames’
+                experience of working with lower-income communities and its
+                partnership with SEWSCAP. Its <strong>accuracy</strong> is
+                supported by an explained peer-research process, but it offers
+                qualitative local evidence rather than a large representative
+                dataset. Its <strong>purpose</strong> was to understand what
+                girls wanted and fund community action, as well as demonstrate
+                the project’s impact.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It provides evidence for possible
+                solutions, particularly involving young people in designing
+                safe, friendly and enjoyable opportunities.
+                <a href="#source-6">View source details ↓</a>
+              </p>
+            </article>
+            <article class="craap-card">
+              <span class="tag">Resource 7 · Sport Wales</span>
+              <h3>Sport and Active Lifestyles 2024–25</h3>
+              <p>
+                This source has excellent <strong>currency</strong> because it
+                covers 2024–25. It is <strong>relevant</strong> because it
+                includes ages 16–24 and therefore gives a picture after
+                compulsory school sport, although it cannot isolate 16–18 year
+                olds and measures physical activity as well as sport. Its
+                <strong>authority</strong> is strong because Sport Wales reports
+                evidence from the Welsh Government’s National Survey for Wales.
+                Its <strong>accuracy</strong> is supported by clear measures and
+                demographic breakdowns, but the activity is self-reported and
+                the age band is broad for this project. Its
+                <strong>purpose</strong> is to inform the public, policymakers
+                and investment decisions, while supporting Sport Wales’ aim of
+                increasing activity.
+              </p>
+              <p>
+                <strong>How it helps:</strong> It provides a wider Welsh picture
+                of participation after age 16, as long as the 16–24 figure is
+                not presented as a specific 16–18 dropout rate.
+                <a href="#source-7">View source details ↓</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sources">
+        <div class="wrap">
+          <div class="kicker">08 / Check the evidence</div>
+          <h2>Sources and further reading</h2>
+          <p class="intro">
+            The first seven sources form the project’s UK evidence base. The
+            final two provide guidance and context for the responses described
+            above.
+          </p>
+          <ol class="source-list">
+            <li id="source-1">
+              <a
+                href="https://sport.wales/research/school-sport-survey/2022"
+                target="_blank"
+                rel="noopener noreferrer"
+                >1. Sport Wales — School Sport Survey 2022 ↗</a
+              ><small
+                >Wales · school years 3–11 · participation and club
+                membership</small
+              >
+            </li>
+            <li id="source-2">
+              <a
+                href="https://womeninsport.org/wp-content/uploads/2022/03/2022-Reframing-Sport-for-Teenage-Girls-Tackling-Teenage-Disengagement.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >2. Women in Sport — Teenage Disengagement ↗</a
+              ><small
+                >UK survey · ages 11–18 · includes a 17–18 comparison</small
+              >
+            </li>
+            <li id="source-3">
+              <a
+                href="https://www.streetgames.org/wp-content/uploads/2025/11/Youth-Insight-Summary-Report-1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >3. StreetGames — 1,000 Young Voices ↗</a
+              ><small
+                >Lower-income households · ages 11–24 · barriers to
+                participation</small
+              >
+            </li>
+            <li id="source-4">
+              <a
+                href="https://www.youthsporttrust.org/research-listings/research/girls-active-national-reports-2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                >4. Youth Sport Trust — Girls Active 2025 ↗</a
+              ><small>England · experiences, confidence and activity</small>
+            </li>
+            <li id="source-5">
+              <a
+                href="https://www.streetgames.org/wp-content/uploads/2023/01/Phase-2-Report.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >5. StreetGames — Gwent Peer Research ↗</a
+              ><small
+                >Local views · younger pupils, including Croesyceiliog</small
+              >
+            </li>
+            <li id="source-6">
+              <a
+                href="https://www.streetgames.org/wp-content/uploads/2023/06/Us-Girls-Wales-Peer-Research18de876cdf8434a5632a81fef35508caf4a1389f21975e39da5969b776d52a49.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >6. StreetGames — Us Girls Wales ↗</a
+              ><small
+                >South East and Mid Wales · peer research and local
+                action</small
+              >
+            </li>
+            <li id="source-7">
+              <a
+                href="https://sport.wales/research/national-survey-sport-active-lifestyles/2024-25"
+                target="_blank"
+                rel="noopener noreferrer"
+                >7. Sport Wales — Sport and Active Lifestyles 2024–25 ↗</a
+              ><small>Wales · adult survey · age band 16–24</small>
+            </li>
+            <li id="source-8">
+              <a
+                href="https://www.gov.uk/government/publications/physical-activity-guidelines-children-and-young-people-5-to-18-years/physical-activity-for-children-and-young-people-5-to-18-years-text-of-the-infographic"
+                target="_blank"
+                rel="noopener noreferrer"
+                >8. UK Chief Medical Officers — Activity guidance ↗</a
+              ><small>Guidance for children and young people aged 5–18</small>
+            </li>
+            <li id="source-9">
+              <a
+                href="https://sport.wales/about/vision-strategy/strategy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >9. Sport Wales — Strategy ↗</a
+              ><small
+                >Approach to access, life transitions and flexible
+                opportunities</small
+              >
+            </li>
+          </ol>
+          <p class="note">
+            Source dates and age ranges differ. Statistics are quoted with their
+            original definitions rather than treated as one combined dataset.
+            Content checked 23 September 2026.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>
+          STAYING IN THE GAME · Tristan Jones · Bassaleg School · Welsh
+          Baccalaureate Global Assignment
+        </p>
+        <p>
+          Built as a single HTML file for GitHub Pages.
+          <a href="#top">Back to top ↑</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
